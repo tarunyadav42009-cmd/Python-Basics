@@ -15,13 +15,19 @@ Avg = Total / 5  # Python 3 automatically converts division to float
 # Output results
 print("\nTotal =", Total)
 print("Avg =", Avg)
+if(Math<35 or Hind<35 or Sci<35 or Sco_Sci<35 or Eng<35):
+    print("Remark: Fail!")
+else:
+    print("Remark: Pass!")
 
 # Grading Logic
 if Avg < 33:
-    print("Fail!")
+    print("Grade: Fail!")
 elif 33 <= Avg <= 60:  
-    print("Pass!")
+    print("Grade: Pass!")
 elif 60 < Avg <= 75:
-    print("First Class!")
+    print("Grade: First Class!")
 else:  # Handles everything above 75
-    print("First Class with Distinction!")
+    print("Grade: First Class with Distinction!")
+
+
