@@ -12,3 +12,17 @@ Avg=(float(Total/5))
 
 print("Total= ",Total)
 print("Avg= ",Avg)
+
+if(Avg<33):
+    print("Fail!")
+
+elif(Avg>33 and Avg<=60):
+    print("Pass!")
+
+elif(Avg>60 and Avg<=75):
+    print("First Class!")
+    
+elif(Avg>75):
+    print("First Class with Distinction!")    
+
+
