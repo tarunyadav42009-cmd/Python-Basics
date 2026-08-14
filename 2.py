@@ -3,7 +3,7 @@ no2=int(input("Enter the 2nd number:"))
 
 
 no1+=no2
-print("Addition is ",no1)
+print("Addition is ",no1)#alternative for add=a+b
 
 no1-=no2
 print("Subtraction is",no1)
