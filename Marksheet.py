@@ -34,37 +34,48 @@ else:  # Handles everything above 75
 
 """
 #Improved Version of code 
+"""
+Marksheet Generator Application
+-------------------------------
+Author: Developer
+Description: Accepts, validates, and processes student marks for five core subjects.
+             Calculates totals, averages, passing status, and final grade classifications.
+"""
 
 print("--- Marksheet Generator ---")
 print("Please enter the marks as whole numbers between 0 and 100.\n")
 
-# Store subjects in a dictionary to easily loop through them
+# Define the core curriculum subjects
 subjects = ["Maths", "English", "Hindi", "Science", "Social Science"]
 marks = {}
 
-# Loop through each subject to get validated input
+# Data Acquisition and Validation Loop
 for sub in subjects:
     while True:
         try:
             score = int(input(f"Enter the marks in {sub}: "))
+            
+            # Ensure the score falls within the standard academic range
             if 0 <= score <= 100:
                 marks[sub] = score
                 break
             else:
                 print("Invalid input! Marks must be between 0 and 100.")
+                
         except ValueError:
-            print("Invalid input! Please enter a whole number.")
+            print("Invalid input! Please enter a valid whole number.")
 
-# Calculations
+# Academic Metrics Calculation
 total_marks = sum(marks.values())
 average_marks = total_marks / len(subjects)
 
-# Output Results
+# Output Results Generation
 print("\n" + "="*30)
 print(f"Total Marks : {total_marks}")
-print(f"Average     : {average_marks:.2f}") # Formats to 2 decimal places
+print(f"Average     : {average_marks:.2f}")
 
-# Pass/Fail Check (Fails if any single subject is below 35)
+# Pass/Fail Threshold Verification
+# A student is marked as 'Fail' if any single subject falls below the 35-mark threshold.
 has_failed_subject = any(score < 35 for score in marks.values())
 
 if has_failed_subject:
@@ -72,7 +83,8 @@ if has_failed_subject:
 else:
     print("Remark      : Pass!")
 
-# Grading Logic based on Average
+# Final Grade Classification
+# Determines academic standing based on the overall percentage/average.
 if average_marks < 33:
     print("Grade       : Fail!")
 elif average_marks < 60:
@@ -81,4 +93,5 @@ elif average_marks <= 75:
     print("Grade       : First Class!")
 else:
     print("Grade       : First Class with Distinction!")
+
 print("="*30)
