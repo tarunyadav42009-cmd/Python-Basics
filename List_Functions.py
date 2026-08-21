@@ -12,3 +12,9 @@ print("After replacing values;",num)
 del num[4]
 
 print("After deleting value:",num)
+
+#Appending List
+
+num.append(90)
+
+print("After Appending Values:",num)
