@@ -1,39 +1,45 @@
-dict={'name':'tarun',
-      
-      'age':17,
-        'salary':60000
-      }
-print(dict)
-dict['age']=16
-print(dict)
+# Initialize a dictionary with employee/user data
+user_profile = {"name": "tarun", "age": 17, "salary": 60000}
+print(user_profile)
 
-dict['school']='dsp'
+# Update the value of an existing key ('age')
+user_profile["age"] = 16
+print(user_profile)
 
-print(dict)
+# Insert a new key-value pair ('school': 'dsp') into the dictionary
+user_profile["school"] = "dsp"
+print(user_profile)
 
-print("Length:",len(dict))
+# Get the total number of key-value pairs (length) in the dictionary
+print("Length:", len(user_profile))
 
-print("Equivalent String:%s"%str(dict))
+# Convert the dictionary into its equivalent string representation
+print("Equivalent String:%s" % str(user_profile))
 
-dict2=dict.copy()
+# Create a shallow copy of the dictionary
+user_profile_copy = user_profile.copy()
+print(user_profile_copy)
 
-print(dict2)
+# Safely retrieve a value using a key (returns None if key doesn't exist)
+print("value:%s" % user_profile.get("age"))
 
-print("value:%s"%dict.get('age'))
+# Retrieve a view object containing all key-value tuples
+print("value:%s" % user_profile.items())
 
-print("value:%s"%dict.items())
+# Retrieve a view object containing all keys from the dictionary
+print("value:%s" % user_profile.keys())
 
-print("value:%s"%dict.keys())
+# Retrieve a view object containing all values from the dictionary
+print("value:%s" % user_profile.values())
 
-print("value:%s"%dict.values())
+# Get key value; if key doesn't exist, insert it with the specified default
+print("value:%s" % user_profile.setdefault("age", None))
+print(user_profile)
 
-print("value:%s"%dict.setdefault('age',None))
+# Initialize two distinct dictionaries to demonstrate merging
+target_dict = {"nm": "tarun", "age": 25}
+source_dict = {"gender": "male"}
 
-print(dict)
-
-tar={'nm':'tarun','age':25}
-tar2={'gender':'male'}
-
-tar.update(tar2)
-
-print(tar)
+# Merge the source dictionary into the target dictionary
+target_dict.update(source_dict)
+print(target_dict)
