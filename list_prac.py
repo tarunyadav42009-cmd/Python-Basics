@@ -31,10 +31,10 @@ print("Max Value:",max(TSG))
 print("Minimum Value:",min(TSG))
 
 TSG.insert(3,90)
-print(TSG)
+print("After inserting a value to list:",TSG)
 
 TSG.append(87)
-print(TSG)
+print("After appending a value to the list:",TSG)
 
 print("Length of list:",len(TSG))
 
