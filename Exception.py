@@ -47,8 +47,28 @@ except ValueError as e:
 
 '''
 
+'''
 try:
     a=int("abc")
 
 except ValueError:
     print("Value Error!!!")
+'''
+
+'''
+try:
+    result="hello"+5
+except TypeError as e:
+    print(e)
+
+'''
+
+my_list=[1,2,3]
+
+for i in range(len(my_list)):
+    print(my_list[i])
+
+try:
+    print(my_list[3])
+except IndexError:
+    print("Index out of range!")
